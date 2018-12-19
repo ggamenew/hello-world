@@ -1,2 +1,36 @@
-<h1>TEST</h1>
-NoCodeHERE
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <chrono>
+#include <thread>
+using namespace std;
+
+
+int main(){
+	string Username1 = "Arianit";
+	int Password1 = 123456;
+	string Username;
+	int Password;
+Error1:
+	cout << "Username:";
+	cin >> Username;
+	cout << "Password:";
+	cin >> Password;
+
+	if(Username==Username1 && Password == Password1){
+		cout << "Logging in..." <<  endl;
+    using namespace std::this_thread; // sleep_for, sleep_until
+    using namespace std::chrono; // nanoseconds, system_clock, seconds
+
+    sleep_for(nanoseconds(10));
+    sleep_until(system_clock::now() + seconds(1));
+		system("cls");
+		cout << "Openning your account, Please wait" << endl;}
+	else{
+		cout << "Sorry something went wrong" << endl;
+		goto Error1;}
+	
+	system ("Pause");
+	return 0;}
+
+
